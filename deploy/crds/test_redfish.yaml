@@ -1,0 +1,26 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: demo-provisioning-secret
+type: Opaque
+data:
+  username: cd9vdAo=
+  password: QwJjLjEyMzQK
+---
+apiVersion: metalkube.org/v1alpha1
+kind: BareMetalHost
+metadata:
+  name: demo-provisioning-host13
+  labels:
+    metalkubedemo: ""
+spec:
+  online: true
+  bmc:
+    address: redfish://xx.xx.xx.xx/redfish/v1
+    credentialsName: demo-provisioning-secret
+  userData:
+    namespace: openshift-machine-api
+    name: worker-user-data
+  image:
+    url: "http://xx.xxx.xx.xxx:9090/cust-ubuntu-18.04.3-2019.11.26-server-amd64.iso"
