@@ -1,8 +1,1 @@
-Bare Metal Operator
-===================
-
-* [API documentation](docs/api.md)
-* [Setup Development Environment](docs/dev-setup.md)
-* [Configuration](docs/configuration.md)
-* [Testing](docs/testing.md)
-* [Publishing Images](docs/publishing-images.md)
+This repo moved to https://github.com/bm-metamorph/MetaMorph
